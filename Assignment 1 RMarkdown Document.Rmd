@@ -86,6 +86,10 @@ Explanation of Histogram
 * As outlined in the Assignment 1 instructions, the bins of the histogram (the sepal width measurement values in which the "tokens" of the flowers with that particular width are placed) are spaced every 0.1 cm, not including the upper value.  The bins on the X-axis are 2.0-2.1 (not including 2.1), 2.1-2.2 (not including 2.2), etc.
 
 ```{r}
+knitr::include_graphics("Versicolor Iris Histogram.jpg")
+``` 
+
+```{r}
 library(magrittr)
 iris_versicolor_subset <- dplyr::filter(iris,
 Sepal.Width <= 2.5,
