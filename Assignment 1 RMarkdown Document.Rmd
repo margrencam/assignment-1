@@ -97,6 +97,21 @@ Species == "versicolor") %>%
 dplyr::select(Sepal.Width, Species)
 knitr::kable(iris_versicolor_subset)
 ```
+Verification of combined histogram using 4 bins 
+* Bin 1 : Sepal width 2.2-2.3 cm, contains 3 flowers
+* Bin 2 : Sepal width 2.6-2.7 cm, contains 5 flowers
+* Bin 3 : Sepal width 3.0-3.1 cm, contains 20 flowers
+* Bin 4 : Sepal width 3.3-3.4 cm, contains 4 flowers
+Sampled bins match between the two separate graphs and the combined graph.
+
+Explanation of Hypothesis A :
+* If the viginica and versicolor iris species are the same in terms of sepal width, that means that the observed measurements for the two flower species exhibt the same distribution.  They don't necessarily show all the same measurements, but the observed measurements can reasonably be patterned in the same manner.  There is no significant (above chance) difference between the meaurement distributions for the two different species.
+
+Explanation of Hypothesis B :
+* If the two species are different in terms of sepal width, that means that their measurements do not follow the same distribution.  Even if there is some overlap between the collected measurements, the measurements cannot be predicted by the same pattern for the two groups.  There is a significant (above chance) difference between the measurement distributions.
+
+Looking at the three graphics, I am generally in favor of Hypothesis A : that the two species are the same in terms of sepal width.  Although the virginica iris shows more occurances of flowers with greater sepal width, both species show a relatively normal distribution of sepal widths with their respective averages near 3.0cm. 
+
 
 ## Exercise 4
 
