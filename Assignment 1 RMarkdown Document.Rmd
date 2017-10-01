@@ -60,7 +60,13 @@ Statement 4
 Statement 5
 
 * "fake_data_points" is the variable whose contents are the 400-point sample generated with the above parameters.
-* I looked up the meaning of "replace=T".  It is a function that allows the possible outcomes to be sampled more than once.  This is useful for our particular data set, as there are only 6 possible outcomes, but we need to generate 400 data points.  
+* I looked up the meaning of "replace=T".  It is a function that allows the possible outcomes to be sampled more than once.  This is useful for our particular data set, as there are only 6 possible outcomes, but we need to generate 400 data points. 
+* sample takes a sample of the specified size from the elements available (in this case the possible_outcomes), either with or without replacement (in this case, with replacement)
+* Our sample function chooses elements available from possible_outcomes, 400 of them (n_data_points), allows for replacement (explained above), at the probability weights for the sampled vector (given in outcome_probabilities)
+
+Statement 6
+
+* I looked up what a data frame in R is.  It is used for storing data tables.  It is a list of vectors of equal length.  Tibble is a particular type of data frame, one which allows for more efficient coding.
 
 ## Exercise 3
 
