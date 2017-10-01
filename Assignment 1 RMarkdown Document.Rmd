@@ -77,6 +77,14 @@ ggplot2::geom_histogram(colour="black", fill="lightgrey", binwidth=0.1) +
 ggplot2::facet_grid(Species ~ .)
 ```
 
+Explanation of Histogram
+
+* Y-axis : the number of flowers observed that have a given sepal width.  For example, there is 1 versicolor iris with a sepal width of 2.0 cm
+* The intervals of the Y-axis are counter-intuitive, as it is not possible to have non-whole integers as a flower count.  Though this does not directly affect the accuracy of the graph, it does make it difficult to interpret.
+
+* X-axis : the measured sepal width of a given flower, in centimeters
+* As outlined in the Assignment 1 instructions, the bins of the histogram (the sepal width measurement values in which the "tokens" of the flowers with that particular width are placed) are spaced every 0.1 cm, not including the upper value.  The bins on the X-axis are 2.0-2.1 (not including 2.1), 2.1-2.2 (not including 2.2), etc.
+
 ```{r}
 library(magrittr)
 iris_versicolor_subset <- dplyr::filter(iris,
