@@ -70,6 +70,13 @@ Statement 6
 
 ## Exercise 3
 
+```{r}
+iris_groups23 <- dplyr::filter(iris, Species %in% c("versicolor", "virginica"))
+ggplot2::ggplot(iris_groups23, ggplot2::aes(x=Sepal.Width)) +
+ggplot2::geom_histogram(colour="black", fill="lightgrey", binwidth=0.1) +
+ggplot2::facet_grid(Species ~ .)
+```
+
 ## Exercise 4
 
 ## Exercise 5
