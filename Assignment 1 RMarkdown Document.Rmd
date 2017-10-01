@@ -77,6 +77,15 @@ ggplot2::geom_histogram(colour="black", fill="lightgrey", binwidth=0.1) +
 ggplot2::facet_grid(Species ~ .)
 ```
 
+```{r}
+library(magrittr)
+iris_versicolor_subset <- dplyr::filter(iris,
+Sepal.Width <= 2.5,
+Species == "versicolor") %>%
+dplyr::select(Sepal.Width, Species)
+knitr::kable(iris_versicolor_subset)
+```
+
 ## Exercise 4
 
 ## Exercise 5
