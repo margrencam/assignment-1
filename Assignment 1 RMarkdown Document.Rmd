@@ -155,3 +155,25 @@ ggplot2::ggplot(ver_balanced, ggplot2::aes(x=Frequency)) +
   ggplot2::geom_histogram(fill="lightgrey", colour="black", binwidth=250) +
 ggplot2::facet_grid(SemanticClass ~ .)
 ```
+Explanation of count data :
+
+Based on the Wikipedia definition, count data is a data type in which the observations can only be non-negative integer values.  These integers come from counting, rather than ranking.
+
+Count data can include :
+1 Simple counts (the number of occurances).  In the case of our data set, this is the number of occurances of a given verb in the corpus.
+2 Categorical data (where the counts represent the number of items falling into each of several categories).  In the case of our data, this is the respective counts in the "opaque" and "transparent" categories.
+
+For this data set and its graphical representation, there is both a raw count and a frequency count.  The raw count is the number of discrete occurances of a particular verb, whether semantically opaque or transparent.  The frequency count serves to reflect the relative frequencies of the different words, which allows for a more accurate comparison than a strict token count.  (While I do understand the value of comparing frequency rather than just raw tokens, I do not fully understand how a normalized frequency is calculated.)
+
+Explanation of Hypotheses
+* Hypothesis A : This hypothesis predicts that the relative frequency of semantically transparent and opaque ver- verbs will exhibit the same distribution.  There will be no significant difference between the two semantic types.  We would expect to see the same frequency pattern, regardless of the number of occurances for each verb type.
+* Hypothesis B : This hypothesis predicts that the relative frequency of semantically transparent and opaque ver- verbs will not be the same.  There will be a significant difference in the frequencies of the two types, regardless of the number of occurances for each verb type.
+
+The graph is not sufficient to decide in favor of one hypothesis or the other because we do not know if the visual differences between the opaque and transparent verb types are significant or if they are at a chance level.
+
+However, if I had to argue in favor of one or the other based on the graph alone, I would argue in favor of Hypothesis B.  I say this based on three observations :
+1. There are several semantically opaque verbs that, while low in count, show a higher relative frequency than any of the semantically transparent verbs.  
+2. Despite the high count of some semantically transparent verbs, they are at a very low relative frequency.  This is different from their semantically opaque counterparts, where the low frequency verbs also have a relatively low count.
+3. There is a greater spread of relative frequency values for the semantically opaque verbs than for the semantically transparent verbs, where the frequencies are all relatively low.
+
+
