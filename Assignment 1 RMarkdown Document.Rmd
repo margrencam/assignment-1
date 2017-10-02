@@ -122,6 +122,25 @@ ggplot2::ggplot(stressshift::stress_shift_permit,
   ggplot2::scale_fill_brewer(palette="Set3")
 ```
 
+```{r}
+ggplot2::ggplot(stressshift::stress_shift_permit, ggplot2::aes(x=0, fill=Syllable)) +
+  ggplot2::geom_bar(position="dodge", colour="black") +
+  ggplot2::scale_fill_brewer(palette="Set3") +
+  ggplot2::xlab("") +
+  ggplot2::theme(axis.text.x=ggplot2::element_blank(),
+                axis.ticks.x=ggplot2::element_blank()) +
+ggplot2::xlim(c(-1,1))
+```
+
+* Hypothesis A : Noun and Verb are the same in terms of their stress.  This hypothesis predicts that the noun and verb forms of the word "permit" will exhibit the same distribution of syllable stress.  Any difference between the patterns of syllable stress shown between the noun and verb forms will not be significantly higher than chance level.  We would predict to observe that both the noun and verb form of "permit" are "stressed" in the same way ; either both on the first syllable, both on the second syllable, or both on a mix of the two syllables.
+* Hypothesis B : Noun and verb are different in terms of their stress.  This hypothesis predicts that the noun and verb forms of the word "permit" will exhibit different distributions of syllable stress.  The difference in stress pattern between the noun and verb forms will be significantly greater than chance level.  We would predict that the noun and verb form of "permit" are not "stressed" on the same syllable.
+
+The two hypotheses cannot be evaluated on the basis of the second graph because in that graph we cannot observe the respective distributions of syllable stress for the two word classes.  The first graph, however, does allow for a visual comparison of the syllable stress distribution for the two words.
+
+The first set of graphs, in which the respective stress distributions of the noun and verb forms of "permit" are shown, coupled with the known stress pattern of two-syllable words that can alter between a noun and verb form, lead me to conclude in favor of Hypothesis B : Permit (noun) and permit (verb) are different in terms of their stress.  Purely on the basis of the first graph, it can be observed that the noun form has a very strong tendancy to be stressed on the first syllabe, and the verb form is overwhelmingly stressed on the second.  Although the noun form does show about 22% (10/45) syllable stress on the second syllable, the distribution does not exhibit the same pattern as that for the verb form.
+
+One possible explanation for the variation in the indicated syllable stress of the noun form in dictionaries is changes/variation in syllable stress marking conventions, given the time-span of the collected data.  Another possible explanation is dialectical differences between dictionaries.  
+
 ## Exercise 5
 
 ```{r}
