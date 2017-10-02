@@ -115,4 +115,17 @@ Looking at the three graphics, I am generally in favor of Hypothesis A : that th
 
 ## Exercise 4
 
+```{r}
+library(magrittr)
+set.seed(1)
+ver_balanced <- languageR::ver %>%
+  dplyr::group_by(SemanticClass) %>%
+  dplyr::sample_n(198)
+set.seed(NULL)
+
+ggplot2::ggplot(ver_balanced, ggplot2::aes(x=Frequency)) +
+  ggplot2::geom_histogram(fill="lightgrey", colour="black", binwidth=250) +
+ggplot2::facet_grid(SemanticClass ~ .)
+```
+
 ## Exercise 5
