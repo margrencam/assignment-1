@@ -116,6 +116,15 @@ Looking at the three graphics, I am generally in favor of Hypothesis A : that th
 ## Exercise 4
 
 ```{r}
+ggplot2::ggplot(stressshift::stress_shift_permit,
+                ggplot2::aes(x=Category, fill=Syllable)) +
+  ggplot2::geom_bar(position="dodge", colour="black") +
+  ggplot2::scale_fill_brewer(palette="Set3")
+```
+
+## Exercise 5
+
+```{r}
 library(magrittr)
 set.seed(1)
 ver_balanced <- languageR::ver %>%
@@ -127,5 +136,3 @@ ggplot2::ggplot(ver_balanced, ggplot2::aes(x=Frequency)) +
   ggplot2::geom_histogram(fill="lightgrey", colour="black", binwidth=250) +
 ggplot2::facet_grid(SemanticClass ~ .)
 ```
-
-## Exercise 5
