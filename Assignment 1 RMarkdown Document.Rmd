@@ -7,6 +7,9 @@ output: html_document
 
 ## Exercise 1
 
+Statistical analysis is at the core of corpus linguistics, which seeks to analyse language with "minimal experimental-interference" (Wikipedia).  
+
+
 ## Exercise 2
 
 ```{r}
@@ -97,17 +100,26 @@ Species == "versicolor") %>%
 dplyr::select(Sepal.Width, Species)
 knitr::kable(iris_versicolor_subset)
 ```
+
 Verification of combined histogram using 4 bins 
+
 * Bin 1 : Sepal width 2.2-2.3 cm, contains 3 flowers
+
 * Bin 2 : Sepal width 2.6-2.7 cm, contains 5 flowers
+
 * Bin 3 : Sepal width 3.0-3.1 cm, contains 20 flowers
+
 * Bin 4 : Sepal width 3.3-3.4 cm, contains 4 flowers
+
 Sampled bins match between the two separate graphs and the combined graph.
 
+
 Explanation of Hypothesis A :
+
 * If the viginica and versicolor iris species are the same in terms of sepal width, that means that the observed measurements for the two flower species exhibt the same distribution.  They don't necessarily show all the same measurements, but the observed measurements can reasonably be patterned in the same manner.  There is no significant (above chance) difference between the meaurement distributions for the two different species.
 
 Explanation of Hypothesis B :
+
 * If the two species are different in terms of sepal width, that means that their measurements do not follow the same distribution.  Even if there is some overlap between the collected measurements, the measurements cannot be predicted by the same pattern for the two groups.  There is a significant (above chance) difference between the measurement distributions.
 
 Looking at the three graphics, I am generally in favor of Hypothesis A : that the two species are the same in terms of sepal width.  Although the virginica iris shows more occurances of flowers with greater sepal width, both species show a relatively normal distribution of sepal widths with their respective averages near 3.0cm. 
@@ -133,6 +145,7 @@ ggplot2::xlim(c(-1,1))
 ```
 
 * Hypothesis A : Noun and Verb are the same in terms of their stress.  This hypothesis predicts that the noun and verb forms of the word "permit" will exhibit the same distribution of syllable stress.  Any difference between the patterns of syllable stress shown between the noun and verb forms will not be significantly higher than chance level.  We would predict to observe that both the noun and verb form of "permit" are "stressed" in the same way ; either both on the first syllable, both on the second syllable, or both on a mix of the two syllables.
+
 * Hypothesis B : Noun and verb are different in terms of their stress.  This hypothesis predicts that the noun and verb forms of the word "permit" will exhibit different distributions of syllable stress.  The difference in stress pattern between the noun and verb forms will be significantly greater than chance level.  We would predict that the noun and verb form of "permit" are not "stressed" on the same syllable.
 
 The two hypotheses cannot be evaluated on the basis of the second graph because in that graph we cannot observe the respective distributions of syllable stress for the two word classes.  The first graph, however, does allow for a visual comparison of the syllable stress distribution for the two words.
@@ -160,20 +173,27 @@ Explanation of count data :
 Based on the Wikipedia definition, count data is a data type in which the observations can only be non-negative integer values.  These integers come from counting, rather than ranking.
 
 Count data can include :
+
 1 Simple counts (the number of occurances).  In the case of our data set, this is the number of occurances of a given verb in the corpus.
+
 2 Categorical data (where the counts represent the number of items falling into each of several categories).  In the case of our data, this is the respective counts in the "opaque" and "transparent" categories.
 
 For this data set and its graphical representation, there is both a raw count and a frequency count.  The raw count is the number of discrete occurances of a particular verb, whether semantically opaque or transparent.  The frequency count serves to reflect the relative frequencies of the different words, which allows for a more accurate comparison than a strict token count.  (While I do understand the value of comparing frequency rather than just raw tokens, I do not fully understand how a normalized frequency is calculated.)
 
 Explanation of Hypotheses
+
 * Hypothesis A : This hypothesis predicts that the relative frequency of semantically transparent and opaque ver- verbs will exhibit the same distribution.  There will be no significant difference between the two semantic types.  We would expect to see the same frequency pattern, regardless of the number of occurances for each verb type.
+
 * Hypothesis B : This hypothesis predicts that the relative frequency of semantically transparent and opaque ver- verbs will not be the same.  There will be a significant difference in the frequencies of the two types, regardless of the number of occurances for each verb type.
 
 The graph is not sufficient to decide in favor of one hypothesis or the other because we do not know if the visual differences between the opaque and transparent verb types are significant or if they are at a chance level.
 
 However, if I had to argue in favor of one or the other based on the graph alone, I would argue in favor of Hypothesis B.  I say this based on three observations :
+
 1. There are several semantically opaque verbs that, while low in count, show a higher relative frequency than any of the semantically transparent verbs.  
+
 2. Despite the high count of some semantically transparent verbs, they are at a very low relative frequency.  This is different from their semantically opaque counterparts, where the low frequency verbs also have a relatively low count.
+
 3. There is a greater spread of relative frequency values for the semantically opaque verbs than for the semantically transparent verbs, where the frequencies are all relatively low.
 
 
